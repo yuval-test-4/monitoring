@@ -25,6 +25,7 @@ public abstract class CustomersServiceBase : ICustomersService
     {
         var customer = new CustomerDbModel
         {
+            Address = createDto.Address,
             CreatedAt = createDto.CreatedAt,
             FirstName = createDto.FirstName,
             UpdatedAt = createDto.UpdatedAt

@@ -2,6 +2,8 @@ namespace Monitoring.APIs.Dtos;
 
 public class Customer
 {
+    public string? Address { get; set; }
+
     public DateTime CreatedAt { get; set; }
 
     public string? FirstName { get; set; }

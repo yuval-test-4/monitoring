@@ -9,6 +9,7 @@ public static class CustomersExtensions
     {
         return new Customer
         {
+            Address = model.Address,
             CreatedAt = model.CreatedAt,
             FirstName = model.FirstName,
             Id = model.Id,
@@ -22,7 +23,12 @@ public static class CustomersExtensions
         CustomerWhereUniqueInput uniqueId
     )
     {
-        var customer = new CustomerDbModel { Id = uniqueId.Id, FirstName = updateDto.FirstName };
+        var customer = new CustomerDbModel
+        {
+            Id = uniqueId.Id,
+            Address = updateDto.Address,
+            FirstName = updateDto.FirstName
+        };
 
         if (updateDto.CreatedAt != null)
         {
